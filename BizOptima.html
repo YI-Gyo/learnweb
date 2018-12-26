@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.google.com/specimen/Montserrat?selection.family=Montserrat" rel="stylesheet">
+        <title>BizOptima</title>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            #{margin: 0; padding: 0;}
+            .layout {
+                width: 800px;
+                margin: 0 auto;
+/*                border:1px solid red;*/
+                font-family: 'Montserrat', sans-serif;
+            }
+            .content {
+                margin: 0 auto;
+                padding: 0;
+                font-family: 'Montserrat', sans-serif;
+            }
+/* navigation menu */
+            .nav {
+                width: 100%;
+                height: 74px;
+                line-height: 74px;
+                font-size: 10px;
+            }
+            .nav-left {
+                float:left;
+                margin-left: 48px;
+            }
+            .nav-right {
+                float:right;
+                margin-right: 70px;
+            }
+            .cl {
+                clear: both;
+            }
+            .nav span {
+                margin-left: 15px;
+            }
+            .nav-right a {
+                color: rgb(210, 204, 207);
+                font-weight: 500px;
+                text-decoration: none;
+            }
+            .nav-right a:hover {
+                color: black;
+            }
+            .nav-left a {
+                text-decoration: none;
+                color: black;
+            }
+
+/* lawyer background part */
+            .background-lawyer {
+                height: 466px;
+                margin: 0;
+                background-position: center;
+                background-size: cover;
+                background-image: url(http://csci571.com/hw/hw3/images/lawyer.jpg);
+/*                border: 2px solid blue;*/
+            }
+            
+/* search form */
+            .blue-box {
+                background-color: rgb(11, 59, 92);
+                margin: 0px;
+                height: 274px;
+                width: 242px;
+                position: relative;
+                top: 99px;
+                left: 52px;
+                
+        
+            }
+            .blue-box h3 {
+                color: rgb(255, 255, 255);
+                font-size: 23px;
+                margin: 0;
+                padding-left: 30px;
+                padding-right: 20px;
+                position: relative;
+                top: 32px;
+                font-weight: normal;
+            }
+            .blue-box h6 {
+                font-size: 10px;
+                font-weight: normal;
+                color: rgb(255, 255, 255);
+                padding-left: 30px;
+                position: relative;
+                top: 28px;
+                margin: 0;
+                
+            }
+            .blue-box p {
+                font-size: 9px;
+                color: rgb(219, 194, 18);
+                position: relative;
+                top: 40px;
+                padding-left: 30px;
+                margin: 0;
+                font-style: oblique;
+            }
+            .search-box-wrapper {
+                display: flex;
+                font-size: 10px;
+                height: 30px;
+/*                border: 1px solid red;*/
+                position: relative;
+                top: 57px;
+            }
+            .search-box-input {
+                font-size: inherit;
+                color:black;
+                border: 0;
+                width: 170px;
+                padding-left: 8px;
+                margin-left: 30px;
+            }
+            .search-box-input:hover {
+                color:#999;
+            }
+            
+            ::placeholder { 
+                color:Black;
+                opacity: 1;
+            }
+            :focus::-moz-placeholder {
+                color: #999;
+            }
+            
+            .sign-up-button {
+                background-color: rgb(219, 194, 18);
+                border: none;
+                color: black;
+                padding: 0;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 8px;
+                cursor: pointer; 
+                height: 30px;
+                width: 100px;
+                margin-left: 30px;
+                margin-top: 73px;
+            }
+            .sign-up-button:hover {
+                background-color: rgb(14, 16, 22);
+                color: white;
+            }
+            
+            .feature-content {
+                background-color: white;
+                height: 268px;
+                width:744px;
+                margin: 0 auto;
+            }
+            .feature-box  {
+                width: 213px;
+                display: inline-block;
+                vertical-align: top;
+                margin: 0 16px;
+                line-height: 13px;
+                padding-top: 86px;
+            }
+            .feature-box h3 {
+                font-size: 10px;
+                color: rgb(14, 14, 14);
+                font-weight: normal;
+            }
+            .feature-box p {
+                font-size: 8px;
+                color: rgb(139, 142, 145);
+                padding-top: 8px;
+                font-weight: bold;
+            }
+            
+            .grey-content {
+                background-color: rgb(240, 240, 240);
+                text-align: center;
+                height: 239px;
+            }
+            .grey-content h3 {
+                font-size: 13px;
+                color: rgb(51,51,51);
+                font-weight: normal;
+                padding-top: 100px;
+            }
+            .grey-content p {
+                font-size: 8px;
+                color: rgb(135, 135, 135);
+                font-weight: bold;
+                padding-top: 10px;
+            }
+            .grey-content span {
+                color: black;
+            }
+        
+            .img {
+                background-image: url(http://csci571.com/hw/hw3/images/glasses.png);
+                filter:grayscale(100%);
+                opacity: 0.3;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+                height: 575px;
+            }
+            .background-notebook {
+                margin-top: -575px;
+                height: 575px;
+                text-align: center;
+            }
+            .background-notebook h3 {
+                font-size: 13px;
+                padding-top: 40px;
+            }
+            .background-notebook p {
+                font-size: 9px;
+                color: rgb(135, 135, 135);
+                font-weight: bold;
+                padding-top: 10px;
+            }
+            
+            .background-notebook .grid-bg {
+                width: 216px;
+                height:355px;
+                background-color: rgb(255, 255, 255);
+                display: inline-block;
+                vertical-align: top;
+                margin-left: 11px;
+                margin-right: 11px;
+                position: relative;
+                top: 69px;
+            }
+            
+            .grid {
+                background-image: url(http://csci571.com/hw/hw3/images/grid.png);
+                background-position: center;
+                background-size: cover;
+            }
+            
+            .grid-top {
+                width: 216px;
+                height:355px;
+                background-color: rgba(255, 255, 255, 0.9);
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+            }
+            
+            .background-notebook .grid-bg p {
+                font-size: 9px;
+                color: rgb(135, 135, 135);
+                font-weight: normal;
+                line-height: 27px;
+                padding-top: 16px;
+            }
+            .background-notebook .grid-bg h6 {
+                padding-top: 48px;
+                color: rgb(51,51,51);
+                font-weight: normal;
+                font-size: 10px;
+            }
+            .background-notebook .grid-bg h4{
+                padding-top: 29px;
+                font-weight: bold;
+            }
+            
+            #buy-button {
+                background-color: rgb(11, 60, 93);
+                border: none;
+                color: rgb(245, 241, 234);
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 9px;
+                font-weight: normal;
+/*                cursor: pointer;*/
+                height: 33px;
+                width: 88px;
+                margin-left: 0px;
+                margin-top: 13px;
+                padding: 0;
+                z-index: 100;
+            }
+            #buy-button:hover {
+                background-color: rgb(14, 16, 22);
+                color: white;
+            }
+            
+            .background-cannon {
+                background-image: url(http://csci571.com/hw/hw3/images/notebook.jpg);
+                background-attachment: fixed;
+                background-position: center;
+                background-size: contain;
+                height: 321px;
+            }
+            .darkblue-content {
+                height: 321px;
+                background-color: rgba(12, 49, 75, 0.8);
+                text-align: center;
+                color: white;
+/*                padding-top: 100px;*/
+                position: relative;
+            }
+            .darkblue-content h3 {
+                color: rgb(245, 241, 234);
+                font-size: 16px;
+                font-weight: normal;
+                padding-top: 115px;
+            }
+            .darkblue-content p {
+                font-size: 8px;
+                color: rgb(245, 241, 234);
+                font-weight: bold;
+                padding-top: 10px;
+            }
+
+            .try-button {
+                background-color: rgb(219, 194, 18);
+                border: none;
+                color: black;
+                padding: 0;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 9px;
+/*                cursor: pointer; */
+                height: 30px;
+                width: 118px;
+                position: relative;
+                top: 23px;
+            }
+            .try-button:hover {
+                background-color: rgb(14, 16, 22);
+                color: white;
+            }
+            
+            .foot {
+                background-color: rgb(29, 37,48);
+                text-align: center;
+                height: 198px;
+            }
+            .foot h3 {
+                color: rgb(206, 206, 206);
+                font-size: 10px;
+                padding-top: 58px;
+            }
+            .foot p {
+                color: rgb(135, 135, 135);
+                font-size: 8px;
+                padding-top: 8px;
+            }
+            .foot ul {
+                margin: 0 auto;
+                padding: 0 285px;
+            }
+            .foot li {
+                background-size: contain;
+                float: left;
+                width: 30px;
+                margin: 22px 7px;
+                overflow: hidden;
+            }
+           
+        </style>
+    </head>
+    <body style="margin-bottom: 0px; margin-top: 0px;">
+        <div class="layout">
+        <header>
+            <div class="nav">
+                <div class="nav-left">
+                    <span>
+                        <h>MENU</h>
+                    </span>
+                </div>
+                <div class="nav-right">
+                    <span>
+                        <a href="page2.html#About" target="_blank">About</a>
+                    </span>
+                    <span>
+                        <a href="page2.html#Projects" target="_blank">Projects</a>
+                    </span>
+                    <span>
+                        <a href="page2.html#Services" target="_blank">Services</a>
+                    </span>
+                </div>
+            </div>
+        </header>
+        
+        <section>
+        <div class="background-lawyer">
+            <div class="blue-box">
+                <h6>DON'T WAIT</h6>
+                <h3>IMPROVE<br/>YOUR BUSINESS<br/>TODAY!</h3>
+                <p>- Get your hands on Biz Optima -</p>
+                <div class="search-box-wrapper">
+                    <input type="text" placeholder="Email" class="search-box-input">
+                </div>
+                <button class="sign-up-button">SIGN UP FOR FREE!</button>
+            </div>
+        </div>       
+        <div class="feature-content">
+            <div class="feature-box">
+                <h3 class="content">AMAZING FEATURE #1</h3>
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Sed malesuada faucibus ex nec ultricies. Donec mattis <br/> egestas nisi non pretium. Suspendisse nec eros ut erat <br/> facilisis maximus. In congue et leo in varius. <br/> Vestibulum sit amet felis ornare, commodo orci ut, <br/> feugiat lorem.</p>
+            </div>
+            <div class="feature-box">
+                <h3 class="content">AMAZING FEATURE #2</h3>
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Sed malesuada faucibus ex nec ultricies. Donec mattis <br/> egestas nisi non pretium. Suspendisse nec eros ut erat <br/> facilisis maximus. In congue et leo in varius. <br/> Vestibulum sit amet felis ornare, commodo orci ut, <br/> feugiat lorem.</p>
+            </div>
+            <div class="feature-box">
+                <h3 class="content">AMAZING FEATURE #3</h3>
+                <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br/> Sed malesuada faucibus ex nec ultricies. Donec mattis <br/> egestas nisi non pretium. Suspendisse nec eros ut erat <br/> facilisis maximus. In congue et leo in varius. <br/> Vestibulum sit amet felis ornare, commodo orci ut, <br/> feugiat lorem.</p>
+            </div>
+        </div>
+            
+        <div class="grey-content">
+            <h3 class="content">"I COULDN'T HAVE ASKED FOR MORE THAN THIS. BIZ OPTIMA IS THE NEXT KILLER APP."</h3>
+            <p class="content"><span>John Doe</span>, CEO & Founder, Blz Optima</p>
+        </div>
+            
+        <div class="img">
+        </div> 
+        <div class="background-notebook">
+            <h3 class="content">PRICES</h3>
+            <p class="content">AFFORDABLE FOR EVERYONE</p>
+            <div class="grid-bg">
+                <div class="grid">
+                    <div class="grid-top">
+                        <h6 class="content">BASIC PLAN</h6>
+                        <p class="content">Plan Amazing Feature #1<br/>Plan Amazing Feature #2<br/>Plan Amazing Feature #3<br/>Plan Amazing Feature #4</p>
+                        <h4 class="content">$29.99<br/>Monthly</h4>
+                        <button id="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-bg">
+                <div class="grid">
+                    <div class="grid-top">
+                        <h6 class="content">STANDARD PLAN</h6>
+                        <p class="content">Plan Amazing Feature #1<br/>Plan Amazing Feature #2<br/>Plan Amazing Feature #3<br/>Plan Amazing Feature #4</p>
+                        <h4 class="content">$39.99<br/>Monthly</h4>
+                        <button id="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-bg">
+                <div class="grid">
+                    <div class="grid-top">
+                        <h6 class="content">CORPORATE PLAN</h6>
+                        <p class="content">Plan Amazing Feature #1<br/>Plan Amazing Feature #2<br/>Plan Amazing Feature #3<br/>Plan Amazing Feature #4</p>
+                        <h4 class="content">$49.99<br/>Monthly</h4>
+                        <button id="buy-button">BUY NOW</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="background-cannon">
+            <div class="darkblue-content">
+                <h3 class="content">TRY THE BEST APP IN THE MARKET</h3>
+                <p class="content">tell more why your software is amazing and why users need to sign up</p>
+                <button class="try-button">TRY IT FOR FREE</button>
+            </div>
+        </div>
+        </section>
+            
+        <footer>
+        <div class="foot">
+            <h3 class="content">BIZ OPTIMA</h3>
+            <p class="content">224 Grant Ave, Redondo Beach, CA, 90278 310.555.1212 Ext. 3 for Business        Needs</p>
+            <ul>
+                <li><a href="https://www.facebook.com/" target="_blank"><img src="http://csci571.com/hw/hw3/images/facebook.png" width="23" height="23" border="0" margin="0"></a></li>
+                <li><a href="https://twitter.com/" target="_blank"><img src="http://csci571.com/hw/hw3/images/twitter.png" width="23" height="23" border="0" margin="0"></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank"><img src="http://csci571.com/hw/hw3/images/instagram.png" width="23" height="23" border="0"></a></li>
+                <li><a href="https://www.youtube.com/" target="_blank"><img src="http://csci571.com/hw/hw3/images/youtube.png" width="23" height="23" border="0"></a></li>
+                <li><a href="https://plus.google.com/discover" target="_blank"><img src="http://csci571.com/hw/hw3/images/googleplus.png" width="23" height="23" border="0"></a></li>
+            </ul>
+        </div>
+        </footer>
+        </div>
+    </body>
+    
+        
+    
